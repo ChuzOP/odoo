@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="sistema_contable.list">
+      <field name="name">sistema_contable list</field>
+      <field name="model">sistema_contable.sistema_contable</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="sistema_contable.action_window">
+      <field name="name">sistema_contable window</field>
+      <field name="res_model">sistema_contable.sistema_contable</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="sistema_contable.action_server">
+      <field name="name">sistema_contable server</field>
+      <field name="model_id" ref="model_sistema_contable_sistema_contable"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="sistema_contable" id="sistema_contable.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="sistema_contable.menu_1" parent="sistema_contable.menu_root"/>
+    <menuitem name="Menu 2" id="sistema_contable.menu_2" parent="sistema_contable.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="sistema_contable.menu_1_list" parent="sistema_contable.menu_1"
+              action="sistema_contable.action_window"/>
+    <menuitem name="Server to list" id="sistema_contable" parent="sistema_contable.menu_2"
+              action="sistema_contable.action_server"/>
+-->
+  </data>
+</odoo>
