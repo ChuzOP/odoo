@@ -1,0 +1,15 @@
+<odoo>
+    <!-- Menú principal para el módulo Estate -->
+    <menuitem id="estate_menu" name="Estate" sequence="1"/>
+
+    <!-- Submenú para Acciones de Propiedades -->
+    <menuitem id="estate_property_menu" name="Properties" parent="estate_menu" action="estate_property_action" sequence="1"/>
+
+    <!-- Submenú para Relaciones y Modelos, que también está bajo el menú Estate -->
+    <menuitem id="relations_models_menu" name="Relations y Models" parent="estate_menu" sequence="2"/>
+
+    <!-- Menús para tipos de propiedad y etiquetas bajo el submenú Relaciones y Modelos -->
+    <menuitem id="estate_property_type_menu" name="Property Types" parent="relations_models_menu" action="estate_property_type_action" sequence="1"/>
+    <menuitem id="estate_property_tag_menu" name="Property Tags" parent="relations_models_menu" action="estate_property_tag_action" sequence="2"/>
+    <menuitem id="estate_property_offer_menu" name="Property Offer" parent="relations_models_menu" action="estate_property_offer_action" sequence="2"/>
+</odoo>
